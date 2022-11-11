@@ -11,6 +11,7 @@ import com.amaurypm.parametros.model.Alumno2
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //overridePendingTransition(R.anim.in_anim, R.anim.hold)
         setContentView(R.layout.activity_main2)
 
         val bundle = intent.extras
@@ -39,5 +40,10 @@ class MainActivity2 : AppCompatActivity() {
 
     fun click(view: View) {
         startActivity(Intent(this, MainActivity3::class.java))
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        //overridePendingTransition(R.anim.hold, R.anim.out_anim)
     }
 }
